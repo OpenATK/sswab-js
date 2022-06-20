@@ -1,0 +1,62 @@
+{
+  "name": "sswab-js",
+  "packageManager": "yarn@3.2.0",
+  "description": "Simple Soil Water Balance. IFSM-based implementation of the water balance submodel used in CERES-Maize.",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "bin": "bin/sswab",
+  "scripts": {
+    "build": "tsc -b",
+    "watch": "tsc -b --watch",
+    "start": "node --enable-source-maps dist/index.js",
+    "test": "mocha --grep Unsaturated"
+  },
+  "mocha": {
+    "require": "ts-node/register/transpile-only",
+    "extension": [
+      "ts"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "arg": "^5.0.2",
+    "bluebird": "^3.7.2",
+    "chalk": "^5.0.1",
+    "convict": "^6.2.3",
+    "csvjson": "^5.1.0",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "figlet": "^1.5.2",
+    "geojson-validation": "^1.0.2",
+    "highcharts": "^10.1.0",
+    "highcharts-export-server": "^2.1.0",
+    "inquirer": "^8.2.4",
+    "inquirer-file-tree-selection-prompt": "^1.0.19",
+    "listr": "^0.14.3",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "moment": "^2.29.3",
+    "pkg-install": "^1.0.0",
+    "soilsjs": "^1.0.6",
+    "solar-rad": "^0.0.3",
+    "typescript": "^4.7.3",
+    "weather-prism": "^0.0.2",
+    "wellknown": "^0.5.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.2",
+    "@types/moment": "^2.13.0",
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "ts-node": "^10.8.1"
+  },
+  "author": "Samuel Noel",
+  "license": "Apache-2.0",
+  "resolutions": {
+    "solar-rad": "portal:/home/sanoel/solar-rad",
+    "weather-prism": "portal:/home/sanoel/weather-prism",
+    "soilsjs": "portal:/home/sanoel/soilsjs"
+  }
+}
